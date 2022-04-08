@@ -1,0 +1,83 @@
+{%extends 'main.html' %}
+
+{% block content %}
+    <div class="text-center my-4">
+        <img src="{{ url_for('static', filename='Images/heart.png') }}"  style="max-height: 200px;"/>
+        <h2>Heart Disease Predicition</h2>
+    </div>
+
+
+    <!-- Form -->
+    <div class="container my-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="row ">
+            <div class="col-lg-7 mx-auto">
+                <div class="card mt-2 mx-auto p-4 bg-light">
+                    <div class="card-body bg-light">
+                        <div class="container">
+                            <form  role="form" action="{{ url_for('predict') }}" method="POST">
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label  class="form-label">chest pain type</label> 
+                                            <select class="form-select form-select-sm" name="cp" >
+                                                <option value="0">asymptomatic</option>
+                                                <option value="1">atypical angina</option>
+                                                <option value="2">non-anginal pain</option>
+                                                <option value="3">typical angina</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="thalach" class="form-label">thalach</label>
+                                            <input type="number" class="form-control" id="thalach" name="thalach" required>
+                                            <div  class="form-text">The person’s maximum heart rate achieved</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label"> Exercise induced angina</label>
+                                            <select class="form-select form-select-sm" name="exang" required>
+                                                <option value="1">yes</option>
+                                                <option value="0">no</option>
+                                              </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="oldpeak" class="form-label">oldpeak</label>
+                                            <input type="number" class="form-control" id="oldpeak" name="oldpeak" step="any" required>
+                                            <div  class="form-text">ST depression induced by exercise relative to rest</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="slope" class="form-label">slope</label>
+                                            <select class="form-select form-select-sm" name="slope">
+                                                <option value="0">downsloping</option>
+                                                <option value="1">flat</option>
+                                                <option value="2">upsloping</option>
+                                              </select>
+                                            <div  class="form-text">the slope of the peak exercise ST segment</div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="mb-3">
+                                            <label for="ca" class="form-label">ca</label>
+                                            <input type="number" class="form-control" id="ca" min="0" max="3" name="ca" required>
+                                            <div  class="form-text">The number of major vessels (0–3)</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="postId" name="postId" value="heart">
+                                        <div class="col-md-12"> <button type="submit" class="btn btn-primary">Click Me To Predict</button> </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div> <!-- /.8 -->
+            </div> <!-- /.row-->
+  
+        </div>
+        <!-- end of form -->
+        {% endblock %}

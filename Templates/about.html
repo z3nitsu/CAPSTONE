@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="{{ url_for('static', filename='css/bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
+    <link
+      href="{{ url_for('static', filename='css/about.css') }}"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="{{ url_for('static', filename='css/global.css') }}"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- NavBar starts -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+      id="navbar"
+    >
+      <div class="container">
+        <img src="{{ url_for('static', filename='Images/healthcare.png') }}" alt="..." style="max-height: 20px;margin-right: 5px"/>
+        <a class="navbar-brand" href="#">MEDCARE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/details">Details</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Predicition
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="/heart">Heart Disease</a></li>
+                <li><a class="dropdown-item" href="/diabetes">Diabetes</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/about">About Us</a>
+            </li>
+          </ul>
+          <a href="tel:108" class="btn btn-danger ms-auto">Emergency Call</a>
+        </div>
+      </div>
+    </nav>
+    <!-- NavBar ends -->
+
+    <div class="bg-light">
+        <div class="container py-5">
+          <div class="row h-100 align-items-center py-5">
+            <div class="col-lg-6">
+              <h1 class="display-4">About us page</h1>
+              <p class="lead text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block" data-aos="fade-up" data-aos-delay="500"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white py-5">
+        <div class="container py-5">
+          <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+            </div>
+            <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2" data-aos="fade-up" data-aos-delay="500"><img src="https://bootstrapious.com/i/snippets/sn-about/img-1.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+          </div>
+          <div class="row align-items-center">
+            <div class="col-lg-5 px-5 mx-auto" data-aos="fade-up" data-aos-delay="500"><img src="https://bootstrapious.com/i/snippets/sn-about/img-2.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+            <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+              <h2 class="font-weight-light">Lorem ipsum dolor sit amet</h2>
+              <p class="font-italic text-muted mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><a href="#" class="btn btn-light px-5 rounded-pill shadow-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-light py-5" data-aos="fade-up" data-aos-delay="500">
+        <div class="container py-5">
+          <div class="row mb-4">
+            <div class="col-lg-5">
+              <h2 class="display-4 font-weight-light">Our team</h2>
+              <p class="font-italic text-muted">We are a group of student, who were united to work on this project </p>
+            </div>
+          </div>
+      
+          <div class="row text-center">
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4 AboutusCard"><img src="https://ums.lpu.in/lpuums/DisplayImageForPowerBi.aspx?id=ce5f545e-9fcc-4613-9e3e-87ee5bf93666" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Lovepreet Singh Gill</h5><span class="small text-uppercase text-muted">11908810</span>
+                <p>Hi,I'm Lovepreet and I worked on the Front-end and Back-end part of the website and as well as the Machine learning Model of Heart Disease to predcit if a user suffer with the disease or not. </p>
+              </div>
+            </div>
+            <!-- End-->
+      
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4 AboutusCard"><img src="https://ums.lpu.in/lpuums/DisplayImageForPowerBi.aspx?id=5f12618c-12a5-4122-a22a-ce23af00bbe5" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">R.Venkata Pavan Sai</h5><span class="small text-uppercase text-muted">11912526</span>
+                <p>Hi,I'm R.Venkata and my work was to take Data set of Breast Cancer from which I take few information and create a Machine learning Model which It will shows whether the User suffer with the disease or not. </p>
+              </div>
+            </div>
+            <!-- End-->
+      
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4 AboutusCard"><img src="https://ums.lpu.in/lpuums/DisplayImageForPowerBi.aspx?id=363da226-3c18-4a63-a50a-ccce6e6888ab" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">Katienefoa Soro</h5><span class="small text-uppercase text-muted">11900675</span>
+                <p>Hi,I'm Soro and I worked on the Front-end and Back-end part of the website and as well as the Machine learning Model of Diabetes Disease to predcit if a user suffer with the disease or not.</p>
+              </div>
+            </div>
+            <!-- End-->
+      
+            <!-- Team item-->
+            <div class="col-xl-3 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4 AboutusCard"><img src="https://ums.lpu.in/lpuums/DisplayImageForPowerBi.aspx?id=4345df6f-29b1-4acb-8d38-1429145162a1" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+                <h5 class="mb-0">G.Samara simha Reddy</h5><span class="small text-uppercase text-muted">11905606</span>
+                <p>Hi,I'm Samara simha and my work was to take Data set of Chronic KIdney from which I would pick information and create a Machine learning Model which It will shows whether the User suffer with the disease or not.</p>
+              </div>
+            </div>
+            <!-- End-->
+      
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-light pb-5">
+        <div class="container text-center">
+          <p class="font-italic text-muted mb-0">&copy; Copyrights Company.com All rights reserved.</p>
+        </div>
+      </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/details.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script
+      src="https://kit.fontawesome.com/10512f35a4.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{%extends 'main.html' %}
+{% block predict %}
+<div class="align-items-center justify-content-center mt-5">
+    <div class="row"  style="margin-bottom: 477px;">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 ">
+            {% if pred == 1 %}
+                <div class="card card-body alert alert-danger">Sorry! Please consult DOCTOR.</div>
+            {% else %}
+                <div class="card card-body alert alert-success">Great! You are HEALTHY.</div>
+            {% endif %}
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4"><a href="{{ url_for('home') }}" class="btn btn-block btn-primary">Back to Home</a></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+</div>
+
+  {% endblock %}

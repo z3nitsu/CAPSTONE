@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ url_for('static', filename='css/details.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="{{ url_for('static', filename='css/global.css') }}"
+      rel="stylesheet"
+    />
+
+</head>
+
+<body>
+
+    <!-- NavBar starts -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="navbar">
+        <div class="container">
+            <img src="{{ url_for('static', filename='Images/healthcare.png') }}" alt="..." style="max-height: 20px;margin-right: 5px"/>
+            <a class="navbar-brand" href="#">MEDCARE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/details">Details</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Predicition
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/heart">Heart Disease</a></li>
+                            <li><a class="dropdown-item" href="/diabetes">Diabetes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About Us</a>
+                    </li>
+                </ul>
+                <a href="tel:108" class="btn btn-danger ms-auto">Emergency Call</a>
+            </div>
+        </div>
+    </nav>
+    <!-- NavBar ends -->
+
+    <div data-aos="fade-up" data-aos-delay="500">
+        <div class="bg-light">
+            <div class="container py-5">
+                <div class="row h-100 align-items-center py-5">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <h1 class="display-4" style="color: black !important"> Details page</h1>
+                        </div>
+                        <div class="row">
+                            <p class="lead text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla
+                                pharetra.
+                            </p>
+                        </div>
+                        <div class="row">
+                            <p class="lead text-muted">dhdgdg <a href="https://bootstrapious.com/snippets"
+                                    class="text-muted">
+                                    <u>hshsgfdg</u></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 d-none d-lg-block"><img
+                            src="{{ url_for('static', filename='Images/Doctor3.png') }}" alt=""
+                            class="img-fluid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="display-4 text-center my-4" data-aos="fade-up" data-aos-delay="500"> Various Disease</div>
+
+    <div class="my-5 detailsCard" data-aos="fade-up" data-aos-delay="500">
+        <div class="container">
+            <!--First card-->
+            <div class="card my-5" >
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="card-img-top m-2">
+                            <img src="{{ url_for('static', filename='Images/sugar-blood-level.png') }}" style="max-height: 200px;" />
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="card-body card-flip">
+                            <div class="card-front">
+
+                                <h5 class="card-title">Diabetes Disease</h5>
+                                <p class="card-text">Diabetes is a condition that develops when your blood
+                                    glucose, often known as blood sugar, is too high. Blood glucose is your
+                                    primary source of energy, and it is obtained from the foods you consume.
+                                    Insulin, a hormone produced by the pancreas, aids in the transport of
+                                    glucose from food into your cells for use as energy. Sometimes your body
+                                    does not produce enough — or any — insulin, or it may not use insulin
+                                    effectively. Glucose remains in your circulation and does not reach your
+                                    cells as a result.</p>
+                            </div>
+                            <div class="card-back">
+                                <h5 class="card-title text-center">Symptoms</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Urinating often.</li>
+                                        <li>Feeling very thirsty.</li>
+                                        <li>Extreme fatigue.</li>
+                                        <li>Blurry vision.</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card my-5">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="card-img-top h-100 m-2">
+                            <img src="{{ url_for('static', filename='Images/heart.png') }}"  style="max-height: 200px;"/>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="card-body card-flip">
+                            <div class="card-front">
+
+                                <h5 class="card-title">Heart Disease</h5>
+                                <p class="card-text">Coronary artery disease occurs when the primary blood arteries
+                                    supplying your heart become damaged or diseased. Coronary artery disease is typically
+                                    caused by cholesterol-containing deposits (plaques) in your coronary arteries as well as
+                                    inflammation. The coronary arteries feed your heart with blood, oxygen, and nourishment.
+                                    Plaque development can restrict these arteries, reducing blood flow to your heart.
+                                    Eventually, the restricted blood flow may produce chest discomfort (angina), shortness
+                                    of breath, or other signs and symptoms of coronary artery disease.</p>
+                            </div>
+                            <div class="card-back">
+                                <h5 class="card-title text-center">Symptoms</h5>
+                                <p class="card-text">
+                                    <div class="row">
+                                        <div class="col">
+                                            <ul>
+                                                <li>chest pain</li>
+                                                <li>breathlessness</li>
+                                                <li>heart palpitations</li>
+                                                <li>nausea</li>
+                                                <li>stomach pain</li>
+                                                <li>sweating</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col">
+                                            <ul>
+                                                <li>arm, jaw, back, or leg pain</li>
+                                                <li>a choking sensation</li>
+                                                <li>swollen ankles</li>
+                                                <li>fatigue</li>
+                                                <li>an irregular heartbeat</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card my-5">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="{{ url_for('static', filename='Images/breast-cancer.png') }}" style="max-height: 200px;"/>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="card-body card-flip">
+                            <div class="card-front">
+
+                                <h5 class="card-title">Breast cancer Disease</h5>
+                                <p class="card-text">Breast cancer is cancer that forms in the cells of the breasts. After skin cancer, breast cancer is the most common cancer diagnosed in women in the United States. Breast cancer can occur in both men and women, but it's far more common in women.</p>
+                            </div>
+                            <div class="card-back">
+                                <h5 class="card-title text-center">Symptoms</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>A breast lump or thickening that feels different from the surrounding tissue</li>
+                                        <li>Change in the size, shape or appearance of a breast</li>
+                                        <li>Changes to the skin over the breast, such as dimpling</li>
+                                        <li>Redness or pitting of the skin over your breast, like the skin of an orange</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card my-5">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <img src="{{ url_for('static', filename='Images/kidney.png') }}" style="max-height: 200px;"/>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="card-body card-flip">
+                            <div class="card-front">
+
+                                <h5 class="card-title">Kidney Disease</h5>
+                                <p class="card-text">Chronic kidney disease, also called chronic kidney failure, describes the gradual loss of kidney function. Your kidneys filter wastes and excess fluids from your blood, which are then excreted in your urine. When chronic kidney disease reaches an advanced stage, dangerous levels of fluid, electrolytes and wastes can build up in your body.</p>
+                            </div>
+                            <div class="card-back">
+                                <h5 class="card-title text-center">Symptoms</h5>
+                                <p class="card-text">
+                                    <ul>
+                                        <li>Nausea</li>
+                                        <li>Vomiting</li>
+                                        <li>Fatigue and weakness</li>
+                                        <li>Muscle twitches and cramps</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center text-lg-start bg-primary" data-aos="fade-up" data-aos-delay="500">
+        <div class="container p-4">
+            <div class="row mt-4">
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">About Project</h5>
+
+                    <p>
+                        This project is the capstone project for the spring semester of
+                        2022. It uses machine learning algorithms (random forest,
+                        k-nearest neighbours, logistic regression, Naive Bayes) and a
+                        dataset of patient data from Kaggle to model and predict the
+                        existence of various diseases in patients, such as heart disease
+                        and diabetes.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4 pb-1">Contact us</h5>
+                    <div class="card" style="width: 18rem; background-color: #081f3e">
+                        <div class="card-body">
+                            <form target="_blank" action="https://formsubmit.co/58fed1a290b57225a6afde2905c2519c"
+                                method="POST">
+                                <div class="form-group">
+                                    <div class="form-row">
+                                        <div class="col mb-3">
+                                            <input type="text" name="name" class="form-control" placeholder="Full Name"
+                                                required />
+                                        </div>
+                                        <div class="col mb-3">
+                                            <input type="email" name="email" class="form-control"
+                                                placeholder="Email Address" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <textarea placeholder="Your Message" class="form-control" name="message" rows="10"
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-lg btn-dark btn-block">
+                                    Send Email
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Team Contact</h5>
+                    
+                    <div class="row mx-5">
+                        <div class="col">
+                            <p>
+                                Lovepreet Singh Gill <br>
+                                lovepreet.11908810@lpu.in <br>
+                                6283974987
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                R.Venkata Pavan Sai <br>
+                                pavandharamtej19@gmail.com <br>
+                                8688574150
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mx-5">
+                        <div class="col">
+                            <p>
+                                Katienefoa Soro <br>
+                                katienefoa.11900675@lpu.in <br>
+                                6283974987
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                G.Samara simha Reddy <br>
+                                samarasimha9876@gmail.com <br>
+                                7780729470
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2022 Copyright:
+            <a class="text-white" href="">test</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- end of footer -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="{{ url_for('static', filename='js/global.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/details.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://kit.fontawesome.com/10512f35a4.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{%extends 'main.html' %}
+
+{% block content %}
+
+<div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Images/sugar-blood-level.png') }}"  style="max-height: 200px;"/>
+    <h2>Diabetes Disease Predicition</h2>
+</div>
+
+<div class="container my-4" data-aos="fade-up" data-aos-delay="500">
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form  role="form" action="{{ url_for('predict') }}" method="POST">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="glucose" class="form-label">Enter your Glucose Value</label>
+                                        <input type="text" id="glucose" name="Glucose" required="required" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="bmi" class="form-label">Enter your Body Mass Index Value</label>
+                                        <input type="text" id="bmi" name="Body mass index(BMI)" placeholder="" required="required" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="age" class="form-label">Enter your Age Value</label>
+                                        <input type="text" id="age" name="Age " required="required" class="form-control"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="pregnancies" class="form-label">Enter your Pregnancies Valuet</label>
+                                        <input type="text" id="pregnancies" name="Pregnancies " required="required" class="form-control"/>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="postId" name="postId" value="diabetes">
+                                    <div class="col-md-12"> <button type="submit" class="btn btn-primary">Click Me To Predict</button> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+
+    </div>
+
+{% endblock %}
