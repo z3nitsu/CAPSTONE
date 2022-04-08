@@ -1,3 +1,3 @@
-web: gunicorn app:app
+web: gunicorn medcareplus:app
 heroku ps:scale web=1
-web: python medcareplus/App.py
+web: python App.py
