@@ -2,6 +2,9 @@
 import numpy as np
 from flask import Flask, render_template,request,send_from_directory
 import pickle#Initialize the flask App
+import os
+
+port = int(os.environ.get('PORT', 5000))  #setting the port 
 
 def predictValue(model, dic):
     dic.popitem()
@@ -55,5 +58,5 @@ def predict():
             pred = predictModel(to_predict_dict)
             return render_template('predict.html', prediction_text='Predict :{}'.format(pred))
 if __name__ == '__main__':
-	app.run(debug = True)
+    app.run(host='0.0.0.0', port=port, debug = True)
  
