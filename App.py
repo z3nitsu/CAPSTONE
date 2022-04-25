@@ -8,10 +8,12 @@ port = int(os.environ.get('PORT', 5000))  #setting the port
 
 def predictValue(model, dic):
     dic.popitem()
+    print(dic)
     new_dic = dic
     predict_list = list(map(float, list(new_dic.values())))
     values = np.asarray(predict_list) 
     prediction = model.predict(values.reshape(1, -1))[0]
+    print(prediction)
     return prediction
 
 def predictModel(dic):
@@ -74,7 +76,8 @@ def kidney():
 def predict():
             to_predict_dict = request.form.to_dict()
             pred = predictModel(to_predict_dict)
-            return render_template('predict.html', prediction_text='Predict :{}'.format(pred))
+            print(pred)
+            return render_template('predict.html', pred = pred)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=port, debug = True)
  
