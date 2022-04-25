@@ -1,0 +1,56 @@
+{%extends 'main.html' %}
+
+{% block content %}
+
+<div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Images/kidney.png') }}"  style="max-height: 200px;"/>
+    <h2>Breast Cancer Predicition</h2>
+</div>
+
+<div class="container my-4" data-aos="fade-up" data-aos-delay="500">
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form  role="form" action="{{ url_for('predict') }}" method="POST">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="mb-3">
+                                      <label for="Albumin" class="form-label">Enter your Albumin Value</label>
+                                      <input type="text" id="Albumin" name="Albumin" required="required" class="form-control"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Bloodroot" class="form-label">Enter your Blood root Value</label>
+                                        <input type="text" id="Bloodroot" name="Bloodroot " required="required" class="form-control"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="htn" class="form-label">Enter your Hypertension Value</label>
+                                        <input type="text" id="htn" name="Hypertension " required="required" class="form-control"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="sc" class="form-label">Enter your Serum creatinime Value</label>
+                                        <input type="text" id="sc" name="Serumcreatinime " required="required" class="form-control"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="su" class="form-label">Enter your Blood Sugar Value</label>
+                                        <input type="text" id="su" name="Blood Sugar " required="required" class="form-control"/>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="wbcc" class="form-label">Enter your White blood ceel count Value</label>
+                                        <input type="text" id="wbcc" name="Whitebloodceelcount " required="required" class="form-control"/>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="postId" name="postId" value="kidney">
+                                    <div class="col-md-12"> <button type="submit" class="btn btn-primary">Click Me To Predict</button> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+
+    </div>
+
+{% endblock %}

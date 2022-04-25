@@ -1,0 +1,84 @@
+{%extends 'main.html' %}
+
+{% block content %}
+
+<div class="text-center my-4">
+    <img src="{{ url_for('static', filename='Images/breast-cancer.png') }}"  style="max-height: 200px;"/>
+    <h2>Breast Cancer Predicition</h2>
+</div>
+
+<div class="container my-4" data-aos="fade-up" data-aos-delay="500">
+    <div class="row ">
+        <div class="col-lg-7 mx-auto">
+            <div class="card mt-2 mx-auto p-4 bg-light">
+                <div class="card-body bg-light">
+                    <div class="container">
+                        <form  role="form" action="{{ url_for('predict') }}" method="POST">
+                            <div class="controls">
+                                <div class="row">
+                                    <div class="mb-3">
+                                      <label for="texture_mean" class="form-label">texture_mean</label>
+                                      <input type="number" class="form-control" id="texture_mean" name="texture_mean" step="0.0001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="area_mean" class="form-label">area_mean</label>
+                                        <input type="number" class="form-control" id="area_mean" name="area_mean" step="0.0001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                      <label for="concave points_mean" class="form-label">concave points_mean</label>
+                                      <input type="number" class="form-control" id="concave points_mean" name="concave points_mean" step="0.0001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                      <label for="area_se" class="form-label">area_se</label>
+                                      <input type="number" class="form-control" id="area_se" name="area_se" step="0.0001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                      <label for="concavity_se" class="form-label">concavity_se</label>
+                                      <input type="number" class="form-control" id="concavity_se" name="concavity_se" step="0.00001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="mb-3">
+                                        <label for="radius_worst" class="form-label">radius_worst</label>
+                                        <input type="number" class="form-control" id="radius_worst" name="radius_worst" step="0.0001" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                  <div class="mb-3">
+                                      <label for="texture_worst" class="form-label">texture_worst</label>
+                                      <input type="number" class="form-control" id="texture_worst" name="texture_worst" step="0.0001" required>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="mb-3">
+                                      <label for="concave points_worst" class="form-label">concave points_worst</label>
+                                      <input type="number" class="form-control" id="concave points_worst" name="concave points_worst" step="0.0001" required>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="mb-3">
+                                      <label for="symmetry_worst" class="form-label">symmetry_worst</label>
+                                      <input type="number" class="form-control" id="symmetry_worst" name="symmetry_worst" step="0.0001" required>
+                                  </div>
+                                </div>
+                                <input type="hidden" id="postId" name="postId" value="cancer">
+                                    <div class="col-md-12"> <button type="submit" class="btn btn-primary">Click Me To Predict</button> </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> <!-- /.8 -->
+        </div> <!-- /.row-->
+
+    </div>
+
+{% endblock %}

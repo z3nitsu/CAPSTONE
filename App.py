@@ -13,16 +13,26 @@ def predictValue(model, dic):
     values = np.asarray(predict_list) 
     prediction = model.predict(values.reshape(1, -1))[0]
     return prediction
+
 def predictModel(dic):
     if list(dic.values())[-1] == 'heart':
         print("Heart")
         model = pickle.load(open('Models/heart.pkl','rb'))
         return predictValue(model, dic)
     elif list(dic.values())[-1] == 'diabetes':
-        print("kindey")
+        print("diabetes")
         model = pickle.load(open('Models/diabetes.pkl','rb'))
         return predictValue(model, dic)
+    elif list(dic.values())[-1] == 'cancer':
+        print("cancer")
+        model = pickle.load(open('Models/BreastCancer.pkl','rb'))
+        return predictValue(model, dic)
+    elif list(dic.values())[-1] == 'kidney':
+        print("kidney")
+        model = pickle.load(open('Models/Kidney.pkl','rb'))
+        return predictValue(model, dic)
     else:
+        print("not correct inputs or no model for this prediciton")
         return
     
     
@@ -51,6 +61,14 @@ def heart():
 @app.route('/diabetes',methods=['POST', 'GET'])
 def diabetes():
     return render_template('diabetes.html')
+
+@app.route('/cancer',methods=['POST', 'GET'])
+def cancer():
+    return render_template('cancer.html')
+
+@app.route('/kidney',methods=['POST', 'GET'])
+def kidney():
+    return render_template('kidney.html')
 
 @app.route('/predict',methods=['POST', 'GET'])
 def predict():
